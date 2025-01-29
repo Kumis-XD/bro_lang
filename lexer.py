@@ -9,6 +9,28 @@ TOKEN_MAP = {
     "selama": "WHILE",       # While loop
     "buat": "FOR",           # For loop
     "balikin": "RETURN",     # Return statement
+    "skip": "PASS",          # Pass (melewatkan blok kode)
+    "lanjut": "CONTINUE",    # Continue (lanjutkan iterasi berikutnya)
+    "berenti": "BREAK",      # Break (keluar dari loop)
+    "nunggu": "AWAIT",       # Await (untuk async)
+    "janji": "ASYNC",        # Async (fungsi asinkron)
+    "cuy": "CLASS",          # Class (untuk membuat kelas)
+    "selfie": "SELF",        # Self (dalam OOP)
+    "superior": "SUPER",     # Super (memanggil parent class)
+    "ambil": "YIELD",        # Yield (generator)
+    "bener": "TRUE",         # Boolean true
+    "salah": "FALSE",        # Boolean false
+    "kosong": "NONE",        # Null atau None
+    "lempar": "RAISE",       # Raise (lempar exception)
+    "tangkep": "TRY",        # Try (blok percobaan)
+    "kecuali": "EXCEPT",     # Except (penanganan error)
+    "akhirnya": "FINALLY",   # Finally (blok yang selalu dieksekusi)
+    "impor": "IMPORT",       # Import (mengimpor modul)
+    "dari": "FROM",          # Dari (import dari modul)
+    "sebagai": "AS",         # As (alias)
+    "hapus": "DEL",          # Del (menghapus variabel atau objek)
+    "global": "GLOBAL",      # Global (deklarasi variabel global)
+    "nonlokal": "NONLOCAL",  # Nonlocal (mengakses variabel dari luar scope)
     "=": "ASSIGN",           # Penugasan
     "+": "PLUS",             # Penambahan
     "-": "MINUS",            # Pengurangan
@@ -29,13 +51,8 @@ TOKEN_MAP = {
     "<=": "LESS_EQUAL",      # Lebih kecil atau sama dengan
     ">=": "GREATER_EQUAL",   # Lebih besar atau sama dengan
     "dan": "AND",            # Operator logika AND
-    "atau": "OR",              # Operator logika OR
-    "tidak": "NOT",            # Operator logika NOT
-    "bener": "TRUE",         # Boolean true
-    "salah": "FALSE",        # Boolean false
-    "kosong": "NONE",        # Null atau None
-    "import": "IMPORT",      # Import
-    "dari": "FROM",          # Dari untuk import
+    "atau": "OR",            # Operator logika OR
+    "tidak": "NOT",          # Operator logika NOT
 }
 
 def lexer(code):
