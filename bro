@@ -3,7 +3,7 @@ import sys
 import os
 
 # Menambahkan direktori 'bro_lang' ke PYTHONPATH agar modul dapat diimpor
-sys.path.append('/data/data/com.termux/files/home/usr/bin/bro_lang')
+sys.path.append(os.path.join(os.path.dirname(__file__), "bro_lang"))
 
 from bro_interpreter import main
 
