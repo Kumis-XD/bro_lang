@@ -13,6 +13,7 @@ fi
 if [ -d "$TARGET_DIR" ]; then
     # Pindahkan file `bro` ke direktori tujuan
     mv bro "$TARGET_DIR/"
+    chmod +x /data/data/com.termux/files/usr/bin/bro
     sleep 2
     # Pindahkan folder `bro_lang` ke direktori tujuan
     mv bro_lang "$TARGET_DIR/"
