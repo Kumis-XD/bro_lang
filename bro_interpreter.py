@@ -5,7 +5,7 @@ from interpreter import Interpreter  # Pastikan kelas Interpreter sudah benar
 
 def main():
     if len(sys.argv) < 2:
-        print("Gunakan: python bro_interpreter.py nama_file.bro")
+        print("Gunakan: bro nama_file.bro")
         return
 
     try:
