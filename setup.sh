@@ -16,6 +16,7 @@ if [ -d "$TARGET_DIR" ]; then
     chmod +x /data/data/com.termux/files/usr/bin/bro
     sleep 2
     # Pindahkan folder `bro_lang` ke direktori tujuan
+    cd $HOME
     mv bro_lang "$TARGET_DIR/"
     echo "Setup success! Now run 'bro your_file.bro'."
 else
