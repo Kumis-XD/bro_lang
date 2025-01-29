@@ -1,29 +1,23 @@
 #!/bin/bash
 
-# Dapatkan path dari script
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-PARENT_DIR="$(dirname "$SCRIPT_DIR")"
-
-# Tentukan target directory berdasarkan sistem
+# Cek apakah menggunakan Termux atau Ubuntu
 if [ -d "/data/data/com.termux" ]; then
+    # Jika di Termux, tentukan direktori tujuan
     TARGET_DIR="/data/data/com.termux/files/usr/bin"
 else
+    # Jika di Ubuntu, tentukan direktori tujuan
     TARGET_DIR="/usr/bin"
 fi
 
-# Pindah ke parent directory terlebih dahulu
-cd "$PARENT_DIR"
-
-# Pastikan folder script masih ada sebelum memindahkan
-if [ -d "$SCRIPT_DIR" ]; then
-    # Hapus folder yang lama jika ada
-    rm -rf "$TARGET_DIR/$(basename "$SCRIPT_DIR")"
-    
-    # Pindahkan folder script ke target directory
-    mv "$SCRIPT_DIR" "$TARGET_DIR/"
-
-    echo "Setup success! Folder telah dipindahkan ke $TARGET_DIR"
+# Cek apakah direktori tujuan ada
+if [ -d "$TARGET_DIR" ]; then
+    # Pindahkan file `bro` ke direktori tujuan
+    mv bro "$TARGET_DIR/"
+    sleep 2
+    # Pindahkan folder `bro_lang` ke direktori tujuan
+    mv bro_lang "$TARGET_DIR/"
+    echo "Setup success! Now run 'bro your_file.bro'."
 else
-    echo "Error: Folder source tidak ditemukan!"
+    echo "Error: Target directory $TARGET_DIR does not exist!"
     exit 1
 fi
